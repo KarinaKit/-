@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>17.6 Практическая работа</title>
+</head>
+<body>
+    <div class="box">
+        <h2 id="title">Добавить запись</h2>
+            <div class="item">
+                <ul class="item-input">
+                    <li class="list-input">
+                        <span class="error" style="display: none;"></span>
+                        <input type="text" id="appellation" name="appellation" class="input" placeholder="Наименование" required>
+                    </li>
+                    <li class="list-input">
+                        <span class="error" style="display: none;"></span>
+                        <input type="text" id="shelf" name="shelf" class="input" placeholder="Полка" required>
+                    </li>
+                    <li class="list-input">
+                        <span class="error" style="display: none;"></span>
+                        <input type="text" id="weight" name="weight" class="input" placeholder="Вес" required>
+                    </li>
+                    <li class="list-input">
+                        <input type="date" id="date" name="date" class="input" required>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn">Добавить запись</button>
+            <span class="err" style="display: none;"></span>
+    </div>
+
+    <div id="loader" class="loader"></div> <!--кружок загрузки-->
+    <span class="error-load" style="display: none;"></span>
+
+    <div class="table-div" style="display: none;">
+        <div class="title-btn">
+            <h2 class="title-tb">Склад</h2>
+            <button class="add-btn">Добавить запись</button>
+        </div>
+                <table class="table">
+                    <thead class="thead">
+                        <tr>
+                            <td class="title-tb"><a href="#" class="name-tb">Название</a></td>
+                            <td class="title-tb"><a href="#" class="shelf-tb">Полка</a></td>
+                            <td class="title-tb"><a href="#" class="weight-tb">Вес</a></td>
+                            <td class="title-tb"><a href="#" class="time-tb">Время хранения</a></td>
+                            <td>🗑️</td>
+                        </tr>
+                    </thead>
+                    <tbody id="record-tbody">
+                        
+                    </tbody>
+                </table>
+    </div>
+    <script type="module" src="./js/SearchName.js"></script>
+    <script type="module" src="./js/settingsInput.js"></script>
+    <script type="module" src="./js/recordAdd.js"></script>
+    <script src="sandbox.js"></script>
+</body>
+</html>
